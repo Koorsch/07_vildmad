@@ -1,0 +1,8 @@
+/* Vores opsætning af hjemmesiden, ikke nogen farver og sådent herinde!! */
+
+/* Brug af vores yndlingsting! */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
