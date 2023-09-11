@@ -3,6 +3,36 @@
 Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
 
 */
+.mobil_long {
+  background-image: url(../media/mobile_long.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  width: 100vw;
+  height: 245vh;
+}
+.mobil_short {
+  background-image: url(../media/mobile_short.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  width: 100vw;
+  height: 160vh;
+}
+/* Desktopversion - de nye baggrundsbilleder */
+@media screen and (min-width: 700px) {
+  .mobil_long {
+    background-image: url(../media/web_medium.svg);
+    height: 140vh; 
+  }
+
+  .mobil_short {
+    background-image: url(../media/web_large.svg);
+    height: 200vh; 
+  }
+}
 
 :root {
   /* 
