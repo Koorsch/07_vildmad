@@ -6,6 +6,24 @@
   padding: 0;
   margin: 0;
 }
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: beige;
+}
+@media screen and (min-width: 700px) {
+.mobil_short {
+  max-width: 1200px;
+  margin: auto;
+}
+.mobil_long {
+  max-width: 1200px;
+  margin: auto;
+}
+}
+
 
 /* 
 ###### BURGERMENU/HEADER START ######
