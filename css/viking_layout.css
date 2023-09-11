@@ -19,7 +19,6 @@
 
 .logo {
   display: flex;
-  cursor: pointer;
   flex-direction: row;
   margin: 0.75rem;
   text-decoration: none;
@@ -29,6 +28,7 @@
 .logo img {
   height: auto;
   width: 50px;
+  cursor: pointer;
 }
 
 .nav_link {
@@ -111,8 +111,11 @@
   transition: transform 0.2s ease;
   transform: translateY(-15px) rotate(45deg);
 }
-
+/* 
+###### BURGERMENU/HEADER END ######
+*/
 @media screen and (min-width: 768px) {
+  /* #### BURGERTING START #### */
   .navbar {
     flex-direction: row;
   }
@@ -129,4 +132,5 @@
   .burger {
     display: none;
   }
+  /* #### BURGERTING END #### */
 }
