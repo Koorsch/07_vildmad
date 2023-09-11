@@ -20,7 +20,7 @@ Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
   
   
   
-  .all-cards{
+  .cards{
     display: flex;
     justify-content: space-around;
     align-items: center;
