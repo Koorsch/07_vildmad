@@ -7,3 +7,13 @@ Burgermenu
 Anden funktionalitet? Kom med bud!
 
 */
+
+// burgermenu
+
+const toggle = document.querySelector(".burger");
+const links = document.querySelector(".nav_link");
+
+toggle.addEventListener("click", () => {
+  links.classList.toggle("active");
+  toggle.classList.toggle("active");
+});
