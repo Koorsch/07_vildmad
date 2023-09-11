@@ -3,6 +3,12 @@
 Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
 
 */
+main {
+  background: radial-gradient(circle at center bottom, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%,transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left,#e2cb91 5%, transparent 6%), radial-gradient(circle at right,#e2cb91 5%, transparent 6%);
+        background-size: 5em 5em;
+        background-color: #e7d0aa;
+        opacity: 1;
+}
 .mobil_long {
   background-image: url(../media/mobile_long.svg);
   background-repeat: no-repeat;
