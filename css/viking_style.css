@@ -14,6 +14,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   margin: auto;
   width: 100vw;
   height: 245vh;
@@ -23,6 +24,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   margin: auto;
   width: 100vw;
   height: 160vh;
@@ -31,14 +33,42 @@ main {
 @media screen and (min-width: 700px) {
   .mobil_long {
     background-image: url(../media/web_medium.svg);
+    flex-direction: row; /* Sørg for, at sektionerne er side om side */
     height: 140vh; 
   }
-
   .mobil_short {
     background-image: url(../media/web_large.svg);
+    flex-direction: row; /* Sørg for, at sektionerne er side om side */
     height: 200vh; 
   }
+
+  .mobil_long .sanke {
+    order: 2;
+  }
+  .mobil_long .hilda {
+    order: 1;
+  }
 }
+/* hilda - mobilskærme */
+@media screen and (max-width: 767px) {
+  .desktop_hilda {
+    display: none; /* Skjul desktop-billedet på mobil */
+  }
+  .mobil_hilda {
+    display: block; /* Vis mobilbilledet på mobil */
+  }
+}
+
+/* For desktopskærme */
+@media screen and (min-width: 768px) {
+  .desktop_hilda {
+    display: block; /* Vis desktop-billedet på desktop */
+  }
+  .mobil_hilda {
+    display: none; /* Skjul mobilbilledet på desktop */
+  }
+}
+
 
 
 :root {
