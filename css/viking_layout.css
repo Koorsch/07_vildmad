@@ -6,6 +6,17 @@
   padding: 0;
   margin: 0;
 }
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: beige;
+}
 
 /* 
 ###### BURGERMENU/HEADER START ######
