@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/viking_database.css">
     <link rel="stylesheet" href="css/viking_layout.css">
     <link rel="stylesheet" href="css/viking_style.css">
+    <link rel="stylesheet" href="css/knap.css">
     <title>Spis som en viking - Ingredienser</title>
 </head>
 <!-- Vores flotte ingredienseliste-view -->
@@ -33,7 +34,33 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
+                src="media/up-arrow.svg" alt="opPil"></button>
+        <a href="index.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
+
+        <section id="filteringsSektion">
+            <form>
+                <button type="submit" id="alfabet">A-Å</button>
+            </form>
+            <form id="filterForm">
+                <!-- <label for="filterCategory">Category:</label> -->
+                <select id="filterCategory" name="filterCategory" onclick="submit()">
+                    <option value="all">Type</option>
+                    <option value="Blomster">Blomster</option>
+                    <option value="Buske og træer">Buske og træer</option>
+                    <option value="Strandurter">Strandurter</option>
+                    <option value="Svampe">Svampe</option>
+                    <option value="Tang">Tang</option>
+                    <option value="Urter og mindre vækster">Urter og mindre vækster</option>
+                </select>
+            </form>
+            <form id="searchButton">
+                <input type="search" name="query" placeholder="Søg..." id="searchBox">
+                <button type="submit" value="Search" id="seaKnap"><img src="media/search.svg" alt="søgKnap"></button>
+            </form>
+        </section>
+    </main>
     <footer></footer>
     <!-- 
     Hvordan skal vores flere ingrediense presenteres?
@@ -41,7 +68,8 @@
 
 </template> 
 -->
-
+    <script src="js/search.js"></script>
+    <script src="js/knap.js"></script>
     <script src="js/viking_general.js"></script>
     <script src="js/viking_database.js"></script>
 </body>

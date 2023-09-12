@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/viking_database.css">
     <link rel="stylesheet" href="css/viking_layout.css">
     <link rel="stylesheet" href="css/viking_style.css">
+    <link rel="stylesheet" href="css/knap.css">
     <title>Spis som en viking - Ingrediens</title>
 </head>
 <!-- Hvis det giver mening at ha en ny side når man klikker på en enskilte ingrediense -->
@@ -33,7 +34,11 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
+                src="media/up-arrow.svg" alt="opPil"></button>
+        <a href="ingredient_list.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
+    </main>
     <footer></footer>
     <!-- 
     Hvordan skal vores enkelte ingrediense presenteres?
@@ -42,6 +47,7 @@
 </template> 
 -->
 
+    <script src="js/knap.js"></script>
     <script src="js/viking_general.js"></script>
     <script src="js/viking_database.js"></script>
 </body>
