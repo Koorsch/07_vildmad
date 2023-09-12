@@ -9,6 +9,7 @@ main {
         background-color: #e7d0aa;
         opacity: 1;
 }
+/* sætter de grønne "skyer" ind*/
 .mobil_long {
   background-image: url(../media/mobile_long.svg);
   background-repeat: no-repeat;
@@ -29,7 +30,7 @@ main {
   width: 100vw;
   height: 160vh;
 }
-/* Desktopversion - de nye baggrundsbilleder */
+/* Desktopversion - de nye baggrundsbilleder grønne "skyer" */
 @media screen and (min-width: 700px) {
   .mobil_long {
     background-image: url(../media/web_medium.svg);
@@ -41,12 +42,22 @@ main {
     flex-direction: row; /* Sørg for, at sektionerne er side om side */
     height: 200vh; 
   }
-
+ 
+/* fortæller hvor sektionerne skal være plassert*/
   .mobil_long .sanke {
     order: 2;
   }
   .mobil_long .hilda {
     order: 1;
+  }
+   /* fortæller hvor sektionerne skal være plassert*/
+   .spis_som_v{
+    flex: 1; 
+    padding-right: 20px;
+  }
+  .hilda_astrid {
+    flex: 1; 
+    padding-left: 20px; 
   }
 }
 /* hilda - mobilskærme */
@@ -59,7 +70,7 @@ main {
   }
 }
 
-/* For desktopskærme */
+/* hilda - desktopskærme */
 @media screen and (min-width: 768px) {
   .desktop_hilda {
     display: block; /* Vis desktop-billedet på desktop */
@@ -68,7 +79,39 @@ main {
     display: none; /* Skjul mobilbilledet på desktop */
   }
 }
+/*fortæller hvordan intro sektionen er plasseret.*/
+.into {
+  display: flex;
+  flex-direction: column; /* sektion på mobil */
+}
+.spis_som {
+  flex: 1; 
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.577); 
+  border-radius: 15px; /* Runde kanter med en radius på 10px */
+  padding: 30px; /* Tilføj lidt polstring for at give plads omkring indholdet */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Skyggeeffekt for at fremhæve kassen */
+  max-width: 330px;
+  margin: 0 auto;
+}
 
+
+@media screen and (min-width: 768px) {
+  .into {
+    flex-direction: row; /* Placer sektioner ved siden af hinanden på desktop */
+    align-items: center; /* Centrer sektioner vertikalt på desktop */
+  }
+
+  .spis_som {
+    flex: 1; 
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  .knud {
+    flex: 1; /* Sektionen tager så meget plads som muligt på desktop */
+  }
+}
 
 
 :root {
