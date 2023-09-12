@@ -114,6 +114,39 @@
 /* 
 ###### BURGERMENU/HEADER END ######
 */
+
+/* 
+##### BODY START ##### 
+*/
+body {
+  display: grid;
+  max-width: 1200px;
+}
+
+/* 
+##### BODY END #####
+*/
+/* 
+##### MAIN START #####
+*/
+main {
+  display: flex;
+}
+/* 
+##### MAIN END #####
+*/
+
+/* 
+##### FOOTER START #####
+*/
+footer {
+  display: flex;
+  background-image: url(../media/web_footer.svg);
+  background-repeat: no-repeat;
+}
+/* 
+##### FOOTER END #####
+*/
 @media screen and (min-width: 768px) {
   /* #### BURGERTING START #### */
   .navbar {
