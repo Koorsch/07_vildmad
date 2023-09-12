@@ -120,6 +120,7 @@
 */
 body {
   display: grid;
+  grid-template-rows: 120px auto auto;
   max-width: 1200px;
 }
 
@@ -129,7 +130,23 @@ body {
 /* 
 ##### MAIN START #####
 */
-
+.grid_article {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  background-image: url(../media/mobile_short.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center center;
+}
+.first {
+  background-color: grey;
+  grid-template-columns: 1fr 1fr;
+}
+.second {
+  background-color: green;
+}
 /* 
 ##### MAIN END #####
 */
@@ -139,8 +156,15 @@ body {
 */
 footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: beige;
   background-image: url(../media/web_footer.svg);
   background-repeat: no-repeat;
+  background-size: cover;
+}
+footer img {
+  max-height: 200px;
 }
 /* 
 ##### FOOTER END #####
