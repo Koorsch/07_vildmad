@@ -4,11 +4,14 @@ Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
 
 */
 main {
+  display: flex;
+  flex-direction: column;
   background: radial-gradient(circle at center bottom, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%,transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left,#e2cb91 5%, transparent 6%), radial-gradient(circle at right,#e2cb91 5%, transparent 6%);
-        background-size: 5em 5em;
-        background-color: #e7d0aa;
-        opacity: 1;
+  background-size: 5em 5em;
+  background-color: #e7d0aa;
+  opacity: 1;
 }
+
 /* sætter de grønne "skyer" ind*/
 .mobil_long {
   background-image: url(../media/mobile_long.svg);
@@ -19,6 +22,8 @@ main {
   margin: auto;
   width: 100vw;
   height: 245vh;
+  z-index: 10;
+  margin-top: 150px;
 }
 .mobil_short {
   background-image: url(../media/mobile_short.svg);
@@ -36,13 +41,13 @@ main {
     background-image: url(../media/web_medium.svg);
     flex-direction: row; /* Sørg for, at sektionerne er side om side */
     height: 140vh; 
+    margin-top: 240px;
   }
   .mobil_short {
     background-image: url(../media/web_large.svg);
-    flex-direction: row; /* Sørg for, at sektionerne er side om side */
+    flex-direction: row; 
     height: 200vh; 
   }
- 
 /* fortæller hvor sektionerne skal være plassert*/
   .mobil_long .sanke {
     order: 2;
@@ -52,10 +57,9 @@ main {
   }
    /* fortæller hvor sektionerne skal være plassert*/
    .spis_som_v{
-    flex: 1; 
-    padding-right: 20px;
+    flex: 1;
   }
-  .hilda_astrid {
+  .sec_hilda_astrid {
     flex: 1; 
     padding-left: 20px; 
   }
@@ -83,35 +87,62 @@ main {
 .into {
   display: flex;
   flex-direction: column; /* sektion på mobil */
+ 
+
 }
 .spis_som {
-  flex: 1; 
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.577); 
-  border-radius: 15px; /* Runde kanter med en radius på 10px */
-  padding: 30px; /* Tilføj lidt polstring for at give plads omkring indholdet */
+  border-radius: 35px; /* Runde kanter med en radius på 10px */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Skyggeeffekt for at fremhæve kassen */
-  max-width: 330px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 20px;
+  padding: 30px;
+  z-index: 1;
 }
 
+.knud_container {
+  position: relative;
+}
 
+/* Størrelse på vikingerne i mobil */
+.knud {
+  width: 250px; 
+  position: absolute;
+  top: -50px;
+  right: 0;
+  z-index: 5;
+}
+.mobil_hilda {
+  width: 350px;
+}
+.hilda2 {
+  width: 190px;
+}
+.astrid{
+  width: 170px;
+}
+/* vikinger Desktop-version */
 @media screen and (min-width: 768px) {
-  .into {
-    flex-direction: row; /* Placer sektioner ved siden af hinanden på desktop */
-    align-items: center; /* Centrer sektioner vertikalt på desktop */
-  }
-
-  .spis_som {
-    flex: 1; 
-    max-width: 330px;
-    margin: 0 auto;
-  }
-
   .knud {
-    flex: 1; /* Sektionen tager så meget plads som muligt på desktop */
+    width: 500px; 
+    margin-top: -100px;
   }
+.desktop_hilda {
+  width: 350px;
 }
+.hilda2 {
+  width: 220px;
+}
+.astrid{
+  width: 210px;
+}
+.spis_som {
+  margin-top: 100px;
+}
+}
+
+
+
 
 
 :root {
