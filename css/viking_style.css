@@ -3,6 +3,73 @@
 Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
 
 */
+main {
+  background: radial-gradient(circle at center bottom, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%,transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left,#e2cb91 5%, transparent 6%), radial-gradient(circle at right,#e2cb91 5%, transparent 6%);
+        background-size: 5em 5em;
+        background-color: #e7d0aa;
+        opacity: 1;
+}
+.mobil_long {
+  background-image: url(../media/mobile_long.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  height: 245vh;
+}
+.mobil_short {
+  background-image: url(../media/mobile_short.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  height: 160vh;
+}
+/* Desktopversion - de nye baggrundsbilleder */
+@media screen and (min-width: 700px) {
+  .mobil_long {
+    background-image: url(../media/web_medium.svg);
+    flex-direction: row; /* Sørg for, at sektionerne er side om side */
+    height: 140vh; 
+  }
+  .mobil_short {
+    background-image: url(../media/web_large.svg);
+    flex-direction: row; /* Sørg for, at sektionerne er side om side */
+    height: 200vh; 
+  }
+
+  .mobil_long .sanke {
+    order: 2;
+  }
+  .mobil_long .hilda {
+    order: 1;
+  }
+}
+/* hilda - mobilskærme */
+@media screen and (max-width: 767px) {
+  .desktop_hilda {
+    display: none; /* Skjul desktop-billedet på mobil */
+  }
+  .mobil_hilda {
+    display: block; /* Vis mobilbilledet på mobil */
+  }
+}
+
+/* For desktopskærme */
+@media screen and (min-width: 768px) {
+  .desktop_hilda {
+    display: block; /* Vis desktop-billedet på desktop */
+  }
+  .mobil_hilda {
+    display: none; /* Skjul mobilbilledet på desktop */
+  }
+}
+
+
 
 :root {
   /* 
