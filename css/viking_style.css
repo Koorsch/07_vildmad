@@ -65,8 +65,8 @@ main {
   }
   .sanke {
     margin-top: 260px;
-    margin-right: 60px;
-    margin-left: 30px;
+    margin-right: 150px;
+    margin-left: 50px;
   }
 }
 
@@ -137,7 +137,7 @@ main {
   }
 .desktop_hilda {
   width: 390px;
-  margin-left: 60px;
+  margin-left: 130px;
   margin-top: 240px;
 }
 .hilda2 {
@@ -148,6 +148,7 @@ main {
 }
 .spis_som {
   margin-top: 100px;
+  margin-left: 100px;
 }
 }
 
