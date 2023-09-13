@@ -23,7 +23,7 @@ body{
 .mobil_long {
   background-image: url(../media/mobile_long.svg);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -33,18 +33,20 @@ body{
   margin-top: 140px;
 }
 .mobil_short {
-  background-image: url(../media/mobile_short.svg);
+  background-image: url(../media/mobile_long.svg);/* Er blevet nød til at sætte den lange ind også, for ellers kunen det ikk evære der*/
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   margin: auto;
   width: 100vw;
-  height: 160vh;
+  height: 245vh;
 }
 .sanke {
   margin-top: 100px;
-
+}
+.spis_som_v1 {
+  margin-top: 110px;
 }
 /* Desktopversion - de nye baggrundsbilleder grønne "skyer" */
 @media screen and (min-width: 700px) {
@@ -53,16 +55,16 @@ body{
     flex-direction: row; /* Sørg for, at sektionerne er side om side */
     background-size: contain ;
     max-width: 1200px;
-    margin-top: 190px;
-    height: 100vh;
-  
+    margin-top: 190px;  
+    height: 160vh;
   }
+
   .mobil_short {
     background-image: url(../media/web_large.svg);
     flex-direction: row; 
     background-size: contain ;
     max-width: 1200px;
-   
+    
   }
 /* fortæller hvor sektionerne skal være plassert*/
   .mobil_long .sanke {
@@ -71,19 +73,53 @@ body{
   .mobil_long .sec_hilda {
     order: 1;
   }
-   /* fortæller hvor sektionerne skal være plassert*/
-   .spis_som_v{
-    flex: 1;
-  }
-  .sec_hilda_astrid {
-    flex: 1; 
-    padding-left: 20px; 
-  }
   .sanke {
     margin-top: 210px;
     margin-right: 20px;
     margin-left: 20px;
   }
+   /* fortæller hvor sektionerne skal være plassert*/
+   .spis_som_v1{
+    flex: 1;
+    margin-top: 170px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+  .spis_som_v2{
+    flex: 1;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+  .sec_hilda_astrid .hilda2 {
+    width: 180px;
+  }
+  .sec_hilda_astrid .astrid {
+    width: 180px;
+  }
+  .sec_hilda_astrid {
+    margin-top: 250px;
+  }
+
+/* spis som en vikking sektion....*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 20px; 
+}
+.spis_som_v1 {
+  grid-row: 1; 
+  grid-column: 1 / span 2; 
+  height: 0px;
+}
+.sec_hilda_astrid {
+  grid-row: 1; 
+  grid-column: 3;
+  height: 0px;
+}
+.spis_som_v2 {
+  grid-row: 2; 
+  grid-column: 1 / span 3; 
+}
 }
 
 /* Style for  .sankelink div */
