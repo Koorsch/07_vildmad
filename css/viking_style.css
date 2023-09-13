@@ -12,8 +12,8 @@ main {
   margin: 0 auto;
 }
 
-body{
-  background: radial-gradient(circle at center bottom, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%,transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left,#e2cb91 5%, transparent 6%), radial-gradient(circle at right,#e2cb91 5%, transparent 6%);
+body {
+  background: radial-gradient(circle at center bottom, #e2cb91 5%, transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%, transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left, #e2cb91 5%, transparent 6%), radial-gradient(circle at right, #e2cb91 5%, transparent 6%);
   background-size: 5em 5em;
   background-color: #e8d4b4;
   opacity: 1;
@@ -33,7 +33,7 @@ body{
   margin-top: 140px;
 }
 .mobil_short {
-  background-image: url(../media/mobile_long.svg);/* Er blevet nød til at sætte den lange ind også, for ellers kunen det ikk evære der*/
+  background-image: url(../media/mobile_long.svg); /* Er blevet nød til at sætte den lange ind også, for ellers kunen det ikk evære der*/
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -53,20 +53,19 @@ body{
   .mobil_long {
     background-image: url(../media/web_medium.svg);
     flex-direction: row; /* Sørg for, at sektionerne er side om side */
-    background-size: contain ;
+    background-size: contain;
     max-width: 1200px;
-    margin-top: 190px;  
+    margin-top: 190px;
     height: 160vh;
   }
 
   .mobil_short {
     background-image: url(../media/web_large.svg);
-    flex-direction: row; 
-    background-size: contain ;
+    flex-direction: row;
+    background-size: contain;
     max-width: 1200px;
-    
   }
-/* fortæller hvor sektionerne skal være plassert*/
+  /* fortæller hvor sektionerne skal være plassert*/
   .mobil_long .sanke {
     order: 2;
   }
@@ -78,14 +77,14 @@ body{
     margin-right: 20px;
     margin-left: 20px;
   }
-   /* fortæller hvor sektionerne skal være plassert*/
-   .spis_som_v1{
+  /* fortæller hvor sektionerne skal være plassert*/
+  .spis_som_v1 {
     flex: 1;
     margin-top: 170px;
     margin-right: 50px;
     margin-left: 40px;
   }
-  .spis_som_v2{
+  .spis_som_v2 {
     flex: 1;
     margin-right: 50px;
     margin-left: 40px;
@@ -100,44 +99,43 @@ body{
     margin-top: 250px;
   }
 
-/* spis som en vikking sektion....*/
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 20px; 
-}
-.spis_som_v1 {
-  grid-row: 1; 
-  grid-column: 1 / span 2; 
-  height: 0px;
-}
-.sec_hilda_astrid {
-  grid-row: 1; 
-  grid-column: 3;
-  height: 0px;
-}
-.spis_som_v2 {
-  grid-row: 2; 
-  grid-column: 1 / span 3; 
-}
+  /* spis som en vikking sektion....*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .spis_som_v1 {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    height: 0px;
+  }
+  .sec_hilda_astrid {
+    grid-row: 1;
+    grid-column: 3;
+    height: 0px;
+  }
+  .spis_som_v2 {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
 }
 
 /* Style for  .sankelink div */
 @media screen and (max-width: 768px) {
   .sec_hilda {
-    position: relative; 
+    position: relative;
   }
   /* Rykker på linket*/
-  .sankelink a{
-    text-align: center; 
-    position: absolute; 
+  .sankelink a {
+    text-align: center;
+    position: absolute;
     font-size: 1rem;
-    left: 180px; 
+    left: 180px;
     top: 1390px;
-    z-index: 15;  
+    z-index: 15;
   }
 }
-
 
 /* hilda - mobilskærme */
 @media screen and (max-width: 767px) {
@@ -162,11 +160,9 @@ body{
 .into {
   display: flex;
   flex-direction: column; /* sektion på mobil */
- 
-
 }
 .spis_som {
-  background-color: rgba(255, 255, 255, 0.577); 
+  background-color: rgba(255, 255, 255, 0.577);
   border-radius: 35px; /* Runde kanter med en radius på 10px */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Skyggeeffekt for at fremhæve kassen */
   max-width: 300px;
@@ -181,7 +177,7 @@ body{
 }
 /* Størrelse på vikingerne i mobil */
 .knud {
-  width: 280px; 
+  width: 280px;
   position: absolute;
   top: -80px;
   right: 10px;
@@ -194,37 +190,33 @@ body{
 .hilda2 {
   width: 190px;
 }
-.astrid{
+.astrid {
   width: 170px;
 }
 /* vikinger Desktop-version */
 @media screen and (min-width: 768px) {
   .knud {
-    width: 600px; 
+    width: 600px;
     margin-top: -200px;
     right: 20px;
   }
-.desktop_hilda {
-  width: 390px;
-  margin-left: 50px;
-  margin-top: 170px;
+  .desktop_hilda {
+    width: 390px;
+    margin-left: 50px;
+    margin-top: 170px;
+  }
+  .hilda2 {
+    width: 220px;
+  }
+  .astrid {
+    width: 210px;
+  }
+  .spis_som {
+    margin-top: 100px;
+    margin-left: 90px;
+    max-width: 500px;
+  }
 }
-.hilda2 {
-  width: 220px;
-}
-.astrid{
-  width: 210px;
-}
-.spis_som {
-  margin-top: 100px;
-  margin-left: 90px;
-  max-width: 500px ;
-}
-}
-
-
-
-
 
 :root {
   /* 
@@ -233,11 +225,9 @@ body{
       */
 }
 
-
-
 /* Før_Under_Efter sanke UX cards */
 
-.cards{
+.cards {
   justify-content: space-around;
   font-size: 1px;
 }
@@ -248,7 +238,7 @@ body{
   width: 300px;
   height: 350px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 /* This container is needed to position the front and back side */
@@ -268,7 +258,8 @@ body{
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -287,4 +278,81 @@ body{
   background-color: beige;
   color: white;
   transform: rotateY(180deg);
+}
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+main {
+  max-width: 1200px;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*********** mobile ******/
+
+@media (max-width: 700px) {
+  .web_footer {
+    display: none;
+  }
+}
+
+/******** web skærm ****/
+@media (min-width: 700px) {
+  main {
+    max-width: 1200px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .mobile_footer {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  background-size: contain;
+  z-index: 100;
+  background-repeat: no-repeat;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  max-height: 10%;
+}
+p {
+  height: 100%;
+}
+
+.logo_footer {
+  aspect-ratio: 30/10;
+  width: 15rem;
+}
+
+#footer_grid {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10%;
 }

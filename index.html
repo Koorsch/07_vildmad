@@ -2,147 +2,173 @@
 <html lang="da">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/viking_database.css">
-  <link rel="stylesheet" href="css/viking_layout.css">
-  <link rel="stylesheet" href="css/viking_style.css">
-  <link rel="stylesheet" href="css/knap.css">
-  <title>Spis som en viking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/viking_database.css">
+    <link rel="stylesheet" href="css/viking_layout.css">
+    <link rel="stylesheet" href="css/viking_style.css">
+    <link rel="stylesheet" href="css/knap.css">
+    <title>Spis som en viking</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="media/logo.svg" alt="Skjold" onclick="window.location.href='index.html'">
-        <!-- <a class="logo" href="#">Viking</a>-->
-      </div>
-      <div class="burger">
-        <span class="bar one"></span>
-        <span class="bar two"></span>
-        <span class="bar three"></span>
-      </div>
-      <div class="nav_link">
-        <ul>
-          <li><a href="#sanke">Hvordan sanker man?</a></li>
-          <li><a href="#leksikon">Leksikon</a></li>
-          <li><a href="ingredient.html">ing - Spis som en Viking</a></li>
-          <li><a href="ingredient_list.html">list - Quiz</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
-        src="media/up-arrow.svg" alt="opPil"></button>
-    <article class="into">
-      <section class="spis_som">
-        <h2>Spise som en viking!</h2>
-        <p>Vi lærer dig at sanke som en ægte viking</p>
-      </section>
-    </article>
-    <div class="knud_container">
-      <img class="knud" src="media/knud.svg" alt="Knud">
-    </div>
-    <article class="mobil_long">
-      <section class="sanke" id="sankeSection">
-        <h2>Hvordan sanker man?</h2>
-        <p>Lær at sanke og lave mad som en ægte viking! “At sanke” er et gammelt vikingeord der dækker over “at samle”.
-          Hvis du sanker, indsamler du mad, som du finder ude i naturen. Sankning kan også dække over indsamling af træ
-          til bål, eller grankogler til pynt og dekorationer. Her på siden kan du lære om hvilke ingredienser vikingerne
-          sankede og hvordan du selv kan komme i gang med at sanke.</p>
-        <div class="sankelink">
-          <a href="https://vildmad.dk/application/files/1215/2518/0205/Sankeregler.pdf">Husk de 9 sankeregler!</a>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="media/logo.svg" alt="Skjold" onclick="window.location.href='index.html'">
+                <!-- <a class="logo" href="#">Viking</a>-->
+            </div>
+            <div class="burger">
+                <span class="bar one"></span>
+                <span class="bar two"></span>
+                <span class="bar three"></span>
+            </div>
+            <div class="nav_link">
+                <ul>
+                    <li><a href="#sanke">Hvordan sanker man?</a></li>
+                    <li><a href="#leksikon">Leksikon</a></li>
+                    <li><a href="ingredient.html">ing - Spis som en Viking</a></li>
+                    <li><a href="ingredient_list.html">list - Quiz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
+                src="media/up-arrow.svg" alt="opPil"></button>
+        <article class="into">
+            <section class="spis_som">
+                <h2>Spise som en viking!</h2>
+                <p>Vi lærer dig at sanke som en ægte viking</p>
+            </section>
+        </article>
+        <div class="knud_container">
+            <img class="knud" src="media/knud.svg" alt="Knud">
         </div>
-      </section>
-      <section class="sec_hilda">
-        <img class="desktop_hilda" src="media/hilda_mg.svg" alt="Hilda">
-        <img class="mobil_hilda" src="media/hilda_mt.svg" alt="Hilda">
-      </section>
-    </article>
+        <article class="mobil_long">
+            <section class="sanke" id="sankeSection">
+                <h2>Hvordan sanker man?</h2>
+                <p>Lær at sanke og lave mad som en ægte viking! “At sanke” er et gammelt vikingeord der dækker over “at
+                    samle”.
+                    Hvis du sanker, indsamler du mad, som du finder ude i naturen. Sankning kan også dække over
+                    indsamling af træ
+                    til bål, eller grankogler til pynt og dekorationer. Her på siden kan du lære om hvilke ingredienser
+                    vikingerne
+                    sankede og hvordan du selv kan komme i gang med at sanke.</p>
+                <div class="sankelink">
+                    <a href="https://vildmad.dk/application/files/1215/2518/0205/Sankeregler.pdf">Husk de 9
+                        sankeregler!</a>
+                </div>
+            </section>
+            <section class="sec_hilda">
+                <img class="desktop_hilda" src="media/hilda_mg.svg" alt="Hilda">
+                <img class="mobil_hilda" src="media/hilda_mt.svg" alt="Hilda">
+            </section>
+        </article>
 
-    <h1 id="leksikon">Leksikon</h1>
+        <h1 id="leksikon">Leksikon</h1>
 
-    <article class="mobil_short">
-      <div class="grid-container">
-        <section class="spis_som_v1">
-          <h2>Spis som en viking</h2>
-          <p>I vikingetiden bestod kosten både af råvarer, som man sankede og som man selv dyrkede. De fleste familier
-            havde deres egne husdyr såsom får, okse og høns som de fik mad fra, og derudover også en mark eller
-            køkkenhave som de dyrkede. Da det ikke var alt mad, de dyrkede selv, sankede de også en del af
-            ingredienserne. Det ville typisk være bær, frugt og planter.</p>
-        </section>
-        <section class="sec_hilda_astrid">
-          <img class="hilda2" src="media/hilda_mg.svg" alt="Hilda">
-          <img class="astrid" src="media/lille_astrid.svg" alt="Astrid">
-        </section>
-        <section class="spis_som_v2">
-          <p>I vikingetiden havde man ikke køleskabe og måtte derfor bruge andre metoder for at konservere madvarerne.
-            Om sommeren og efteråret brugte man solen til tørre årets høst af grøntsager, frugt og bær. Så kunne de
-            bruges over vinteren til madlavning. Mange af de retter vikinger levede af, kan stadig laves den dag i dag,
-            med de samme ingredienser som vikingerne sankede i naturen. Nedenfor kan du se tre forskellige opskrifter på
-            retter, som vikingerne spiste med ingredienser som du selv kan sanke i den danske natur. - <i>Nedenfor ses
-              opskrifter som vikingerne lavede med ingredienser de sankede </i></p>
-        </section>
-      </div>
-    </article>
+        <article class="mobil_short">
+            <div class="grid-container">
+                <section class="spis_som_v1">
+                    <h2>Spis som en viking</h2>
+                    <p>I vikingetiden bestod kosten både af råvarer, som man sankede og som man selv dyrkede. De fleste
+                        familier
+                        havde deres egne husdyr såsom får, okse og høns som de fik mad fra, og derudover også en mark
+                        eller
+                        køkkenhave som de dyrkede. Da det ikke var alt mad, de dyrkede selv, sankede de også en del af
+                        ingredienserne. Det ville typisk være bær, frugt og planter.</p>
+                </section>
+                <section class="sec_hilda_astrid">
+                    <img class="hilda2" src="media/hilda_mg.svg" alt="Hilda">
+                    <img class="astrid" src="media/lille_astrid.svg" alt="Astrid">
+                </section>
+                <section class="spis_som_v2">
+                    <p>I vikingetiden havde man ikke køleskabe og måtte derfor bruge andre metoder for at konservere
+                        madvarerne.
+                        Om sommeren og efteråret brugte man solen til tørre årets høst af grøntsager, frugt og bær. Så
+                        kunne de
+                        bruges over vinteren til madlavning. Mange af de retter vikinger levede af, kan stadig laves den
+                        dag i dag,
+                        med de samme ingredienser som vikingerne sankede i naturen. Nedenfor kan du se tre forskellige
+                        opskrifter på
+                        retter, som vikingerne spiste med ingredienser som du selv kan sanke i den danske natur. -
+                        <i>Nedenfor ses
+                            opskrifter som vikingerne lavede med ingredienser de sankede </i>
+                    </p>
+                </section>
+            </div>
+        </article>
 
-    <article class="cards">
+        <article class="cards">
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="media/skov.webp" alt="Avatar">
-          </div>
-          <div class="flip-card-back">
-            <p><br>Før I går ud i naturen er det vigtigt at I kender til de 9 sankeregler. Husk at læse dem godt
-              igennem! Det er vigtigt at have kendskab til hvilke råvarer der er i sæson lige nu for at optimere sin
-              sankning</p>
-          </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="media/skov.webp" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><br>Før I går ud i naturen er det vigtigt at I kender til de 9 sankeregler. Husk at læse dem
+                            godt
+                            igennem! Det er vigtigt at have kendskab til hvilke råvarer der er i sæson lige nu for at
+                            optimere sin
+                            sankning</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="media/strand.webp" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><br>For at finde råvarer er det en god ide at undersøge landskabet og naturen grundigt. I kan
+                            bruge billeder og beskrivelser til at finde de rigtige råvarer. I må ikke spise de råvarer,
+                            I
+                            finder derude, før jeres lærer har godkendt dem!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="media/raps.webp" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><br>Først skal i have godkendt jeres høst af jeres lærer. På den måde er I sikker på at I kan
+                            spise alle råvarerne! Derefter er det tid til at gå i gang med madlavningen.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div>
+            <div id="footer_grid">
+                <img class="logo_footer" src="media/logo.svg" alt="logo">
+                <p> Vild Mad
+                </p>
+            </div>
+            <div>
+                <img class="web_footer" src="media/web_footer.svg" alt="web footer">
+            </div>
+            <div>
+                <img class="mobile_footer" src="media/mobile_footer.svg" alt="mobile footer">
+            </div>
         </div>
-      </div>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="media/strand.webp" alt="Avatar">
-          </div>
-          <div class="flip-card-back">
-            <p><br>For at finde råvarer er det en god ide at undersøge landskabet og naturen grundigt. I kan
-              bruge billeder og beskrivelser til at finde de rigtige råvarer. I må ikke spise de råvarer, I
-              finder derude, før jeres lærer har godkendt dem!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="media/raps.webp" alt="Avatar">
-          </div>
-          <div class="flip-card-back">
-            <p><br>Først skal i have godkendt jeres høst af jeres lærer. På den måde er I sikker på at I kan spise alle råvarerne! Derefter er det tid til at gå i gang med madlavningen.</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </main>
-
-
-
-  <footer>
-    <!-- Indhold i footer -->
-  </footer>
-  <!--
+    </footer>
+    <!--
         Tilføje vores endelige liste-view template
         
     <template>
         Herinde smutter vi det vi kommer frem til
     </template> 
     -->
-  <script src="js/knap.js"></script>
-  <!-- <script src="js/viking_general.js"></script>
+    <script src="js/knap.js"></script>
+    <!-- <script src="js/viking_general.js"></script>
     <script src="js/viking_database.js"></script> -->
 
 </body>
