@@ -2,55 +2,94 @@
 Database url:
 https://dxjndlaoykzgvhimnoof.supabase.co
 API key:
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4am5kbGFveWt6Z3ZoaW1ub29mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTM3ODUsImV4cCI6MjAwOTU2OTc4NX0.RkT-LWKiZZJ5f0UCuatvH_RWrtQgmt7jpEefYp7s_9g
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4am5kbGFveWt6Z3ZoaW1ub29mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ2MTc2MzMsImV4cCI6MjAxMDE5MzYzM30._r8hyVe9Jga-JPqC2h1OR2cSVZaJtXgmlmxA_ocNzPE
 -------------------------------------------- */
-const url = "https://dxjndlaoykzgvhimnoof.supabase.co/";
-const viking = "rest/v1/viking_data";
+const supabase_db = "https://dxjndlaoykzgvhimnoof.supabase.co/";
+const viking_db = "rest/v1/viking_single";
 const basFilter = "";
 
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4am5kbGFveWt6Z3ZoaW1ub29mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM5OTM3ODUsImV4cCI6MjAwOTU2OTc4NX0.RkT-LWKiZZJ5f0UCuatvH_RWrtQgmt7jpEefYp7s_9g";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4am5kbGFveWt6Z3ZoaW1ub29mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ2MTc2MzMsImV4cCI6MjAxMDE5MzYzM30._r8hyVe9Jga-JPqC2h1OR2cSVZaJtXgmlmxA_ocNzPE";
 
+//betinget valg af urlParams
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
 // hente data'en fra vores flotte database, filter tilføjet
-fetch(url + viking + basFilter, {
+fetch(supabase_db + viking_db + basFilter, {
   method: "GET",
   headers: {
     apikey: key,
   },
 })
   .then((res) => res.json())
-  .then(showIngredients);
+  .then(getIngredients);
 
 //   første trind, fang alle ting i tablen
-function showIngredients(ingredients) {
-  ingredients.forEach(showIngredient);
+function getIngredients(getIngredient) {
+  getIngredient.forEach(showIngredient);
 }
 // andre trind, pluk ud de enkelte ingredienser og lav liste view
-function showIngredient(ingredient) {
-  console.log(ingredient);
+function showIngredient(ing) {
+  console.log(ing.season);
+  console.log(id);
+  //laver copies ud fra vores template og tilføjer til clones.
+  const template = document.querySelector("template").content;
+  const copy = template.cloneNode(true);
 
-  //   const template = document.querySelector("template").content;
-  //   const copy = template.cloneNode(true);
-
-  /*
-    Vores template skabelon,
-
-    copy.querySelector("titlenavn").textContent = ingredient.title;
-    copy.querySelector("underrubrik").textContent = ingredient.categories.0.name;
-    copy.querySelector("billedet").src = ingredient.profile_img.src;
-    copy.querySelector("billedet").alt = "Billede af " + ingredient.title;
-
-
-    const parent = document.querySelector("HVAD ER VORES PARENT?");
-    parent.appendChild(copy);
-
-*/
+  copy.querySelector("ingredientName").textContent = ing.ingredientName;
+  copy.querySelector("ingredientImg").src = ing.ingredientImg;
+  copy.querySelector("visninger").textContent = ing.visninger;
+  copy.querySelector("sankeType").textContent = ing.sankeType;
+  copy.querySelector("season").textContent = ing.season;
+  copy.querySelector("sankeTypeFirst").textContent = img.sankeTypeFirst;
+  copy.querySelector("sankeTypeFirstDesc").textContent = img.sankeTypeFirstDesc;
+  copy.querySelector("sankeTypeFirstDescTwo").textContent = img.sankeTypeFirstDescTwo;
+  copy.querySelector("sankeTypeFirstImg").src = img.sankeTypeFirstImg;
+  copy.querySelector("sankeTypeSecond").textContent = ing.sankeTypeSecond;
+  copy.querySelector("sankeTypeSecondDesc").textContent = ing.sankeTypeSecondDesc;
+  copy.querySelector("sankeTypeSecondDescTwo").textContent = ing.sankeTypeSecondDescTwo;
+  copy.querySelector("sankeTypeSecondImg").src = ing.sankeTypeSecondImg;
+  copy.querySelector("sankeTypeThird").textContent = ing.sankeTypeThird;
+  copy.querySelector("sankeTypeThirdDesc").textContent = ing.sankeTypeThirdDesc;
+  copy.querySelector("sankeTypeThirdDescTwo").textContent = ing.sankeTypeThirdDescTwo;
+  copy.querySelector("sankeTypeThirdImg").src = ing.sankeTypeThirdImg;
+  //vi sørger for at hver kopi tilføjes ind i vores container
+  const parent = document.querySelector("list_container");
+  parent.appendChild(copy);
 }
-// function sortIngredients(sorting) {}
 
 /*
+VORES FLOTTE DATABASE ####
+
+Object { id: 308, visninger: 5331, ingredientName: "Fuglegræs", ingredientImg: "https://vildmadv2.vps.webdock.io/application/files/1016/2437/0364/Fuglegraes_ravarkort_app.png", type: "Urter og mindre vækster", season: "0,1,2,3", "season/0": 0, "season/1": 1, "season/2": 2, "season/3": 3, … }
+​{
+  id: 308
+  ingredientImg: "https://vildmadv2.vps.webdock.io/application/files/1016/2437/0364/Fuglegraes_ravarkort_app.png"
+  ingredientName: "Fuglegræs"
+  sankeTypeFirst: "Hegn"
+  sankeTypeFirstDesc: "Tæt bevokset"
+  sankeTypeFirstDescTwo: "Åbent"
+  sankeTypeFirstImg: "https://vildmadv2.vps.webdock.io/application/files/2114/9036/4146/hegn.jpg"
+  sankeTypeSecond: "Grøftekant"
+  sankeTypeSecondDesc: "Næringsfattig"
+  sankeTypeSecondDescTwo: "Næringsrig"
+  sankeTypeSecondImg: "https://vildmadv2.vps.webdock.io/application/files/4616/2089/7447/VILDMAD_BT_Groftekant_05.jpg"
+  sankeTypeThird: "Græsland"
+  sankeTypeThirdDesc: "Næringsfattig"
+  sankeTypeThirdDescTwo: "Næringsrig"
+  sankeTypeThirdImg: "https://vildmadv2.vps.webdock.io/application/files/7916/2089/7481/Vildmad_BT_Gresland_09.jpg"
+  season: "0,1,2,3"
+  "season/0": 0
+  "season/1": 1
+  "season/2": 2
+  "season/3": 3
+  type: "Urter og mindre vækster"
+  visninger: 5331
+}
+*/
+
+/*
+ORIGINALE DATABASEN ####
 {
     "id": 393,
     "title": "Stor løghat",
