@@ -188,11 +188,7 @@ a {
 /* 
 ##### BODY START ##### 
 */
-body {
-  display: grid;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* 
 ##### BODY END #####
