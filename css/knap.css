@@ -32,6 +32,8 @@
   align-items: center;
   padding: 2%;
   background-color: #6f9d6b;
+  margin-top: -10%;
+  z-index: 20;
 }
 
 #filterCategory,

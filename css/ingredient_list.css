@@ -1,0 +1,58 @@
+main {
+  display: grid;
+}
+#leksikon {
+  display: grid;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.hilda {
+  margin-top: 37%;
+  z-index: 10;
+  justify-self: end;
+  margin-right: 5%;
+}
+.leksikon_box {
+  position: absolute;
+  background-color: rgba(211, 211, 211, 0.638); /* skal ændres til den rigtige farve*/
+  width: 280px;
+  padding: 25px;
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  margin-top: 15%;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+h3 {
+  padding: 5%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #leksikon {
+    grid-column: 1;
+  }
+  .leksikon_box {
+    margin-top: 10%;
+    justify-self: end;
+    width: 40%;
+    height: 20%;
+  }
+  .hilda {
+    grid-column: 2;
+    margin-top: -5%;
+    justify-self: center;
+    padding: 10%;
+    width: 65%;
+  }
+  #filteringsSektion {
+    grid-column: 2 span;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
