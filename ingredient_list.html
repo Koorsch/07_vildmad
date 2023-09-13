@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/viking_layout.css">
     <link rel="stylesheet" href="css/viking_style.css">
     <link rel="stylesheet" href="css/knap.css">
+    <link rel="stylesheet" href="css/ingredient_list.css">
     <title>Spis som en viking - Ingredienser</title>
 </head>
 <!-- Vores flotte ingredienseliste-view -->
@@ -39,12 +40,21 @@
                 src="media/up-arrow.svg" alt="opPil"></button>
         <a href="index.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
 
+        <article id="leksikon">
+            <div class="leksikon_box">
+                <h3>Leksikon</h3>
+                <p>Her kan du se hvilke ingredienser <br>
+                    Vikingerne sankede og information <br>
+                    Omkring dem</p>
+            </div>
+        </article>
+        <img src="media/hilda.svg" alt="hilda" class="hilda">
+
         <section id="filteringsSektion">
             <form>
                 <button type="submit" id="alfabet">A-Å</button>
             </form>
             <form id="filterForm">
-                <!-- <label for="filterCategory">Category:</label> -->
                 <select id="filterCategory" name="filterCategory" onclick="submit()">
                     <option value="all">Type</option>
                     <option value="Blomster">Blomster</option>
@@ -59,6 +69,72 @@
                 <input type="search" name="query" placeholder="Søg..." id="searchBox">
                 <button type="submit" value="Search" id="seaKnap"><img src="media/search.svg" alt="søgKnap"></button>
             </form>
+        </section>
+        <section id="billede_grid">
+            <h3>B</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <article class="billede_grid">
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+            </article>
+            <h3>C</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <article class="billede_grid">
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+            </article>
+            <h3>D</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <article class="billede_grid">
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+            </article>
+            <h3>E</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <article class="billede_grid">
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+                <a href="ingredient.html" class="circular--portrait"><img src="media/hyldeblomst.webp" alt="hyldeblomst"
+                        class="ingredient_billede"></a>
+            </article>
         </section>
     </main>
     <footer></footer>
