@@ -13,10 +13,13 @@ main {
 }
 
 body{
+  display: grid;
   background: radial-gradient(circle at center bottom, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%, transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at center top, #e2cb91 5%,transparent 6%, transparent 19%, #e2cb91 20%, #e2cb91 25%, transparent 26%,transparent 39%, #e2cb91 40%, #e2cb91 45%, transparent 46%), radial-gradient(circle at left,#e2cb91 5%, transparent 6%), radial-gradient(circle at right,#e2cb91 5%, transparent 6%);
   background-size: 5em 5em;
   background-color: #e8d4b4;
   opacity: 1;
+  grid-template-columns: repeat(auto-fit 1fr);
+  grid-template-rows: auto;
 }
 
 /* sætter de grønne "skyer" ind*/
@@ -80,15 +83,20 @@ body{
   }
    /* fortæller hvor sektionerne skal være plassert*/
    .spis_som_v1{
-    flex: 1;
+    flex: auto;
+    grid-auto-columns: auto;
     margin-top: 170px;
     margin-right: 50px;
     margin-left: 40px;
   }
   .spis_som_v2{
-    flex: 1;
+    grid-row-start: 2;
+    grid-column: 1 / span 3;
+    margin-top: -900px;
     margin-right: 50px;
     margin-left: 40px;
+    
+}
   }
   .sec_hilda_astrid .hilda2 {
     width: 180px;
@@ -97,6 +105,7 @@ body{
     width: 180px;
   }
   .sec_hilda_astrid {
+    flex: auto;
     margin-top: 250px;
   }
 
@@ -104,6 +113,7 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
+  grid-auto-columns: auto;
   gap: 20px; 
 }
 .spis_som_v1 {
@@ -115,11 +125,6 @@ body{
   grid-row: 1; 
   grid-column: 3;
   height: 0px;
-}
-.spis_som_v2 {
-  grid-row: 2; 
-  grid-column: 1 / span 3; 
-}
 }
 
 /* Style for  .sankelink div */
@@ -289,19 +294,40 @@ body{
   transform: rotateY(180deg);
 }
 
+/* OPSKRIFTER */
 
+.opskrifter{
+  box-sizing: border-box;
 
-.opskrifter {
-  margin: 0;
 }
 
-.popup {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  display: flex;
-  background-color: rgba(0, 0, 0, .5);
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
