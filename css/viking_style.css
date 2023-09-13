@@ -10,3 +10,81 @@ Generel styling, samlet på et stede - dette styrer kun udseende, ikke layout!
       --hvorvibrugerfarven: #farvvalget;
       */
 }
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+main {
+  max-width: 1200px;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*********** mobile ******/
+
+@media (max-width: 700px) {
+  .web_footer {
+    display: none;
+  }
+}
+
+/******** web skærm ****/
+@media (min-width: 700px) {
+  main {
+    max-width: 1200px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .mobile_footer {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  background-size: contain;
+  z-index: 100;
+  background-repeat: no-repeat;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  max-height: 10%;
+}
+p {
+  height: 100%;
+}
+
+.logo_footer {
+  aspect-ratio: 30/10;
+  width: 15rem;
+}
+
+#footer_grid {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10%;
+}
