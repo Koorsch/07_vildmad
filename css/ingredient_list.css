@@ -14,7 +14,8 @@ img {
   justify-self: end;
   margin-right: 5%;
 }
-.leksikon_box {
+.leksikon_box,
+#hyldeblomst_h2 {
   position: absolute;
   background-color: rgba(211, 211, 211, 0.638); /* skal ændres til den rigtige farve*/
   width: 280px;
@@ -25,6 +26,10 @@ img {
   margin-top: 15%;
   border-radius: 25px;
   box-sizing: border-box;
+}
+#hyldeblomst_h2 {
+  margin-top: 5rem;
+  margin-left: 20rem;
 }
 h3 {
   padding: 5% 0 0;
@@ -66,6 +71,46 @@ hr {
   width: 100%;
   height: auto;
 }
+#hyldeblomst_img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  margin-bottom: 5%;
+  margin-left: 8rem;
+}
+.ingredient_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ingredient_box {
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-self: center;
+  justify-content: center;
+}
+.ingredient_section {
+  background-color: #f0e5d2;
+  display: grid;
+}
+@media screen and (max-width: 768px) {
+  .ingredient_top {
+    grid-template-columns: 1fr;
+  }
+  #hyldeblomst_h2 {
+    margin-top: 17rem;
+    margin-left: 0;
+  }
+  #hyldeblomst_img {
+    margin-left: 0;
+    margin-bottom: 9rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
   main {
@@ -103,5 +148,8 @@ hr {
   .circular--portrait {
     width: 200px;
     height: 200px;
+  }
+  #grid_1 {
+    grid-template-columns: 1fr;
   }
 }
