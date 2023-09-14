@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/viking_database.css">
+    <link rel="stylesheet" href="css/viking_layout.css">
+    <link rel="stylesheet" href="css/viking_style.css">
+    <link rel="stylesheet" href="css/knap.css">
+    <link rel="stylesheet" href="css/ingredient.css">
+    <link rel="stylesheet" href="css/ingredient_list.css">
+    <title>Spis som en viking - Ingrediens</title>
+
+</head>
+<!-- Hvis det giver mening at ha en ny side når man klikker på en enskilte ingrediense -->
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="media/logo.svg" alt="Skjold" onclick="window.location.href='index.html'">
+                <!-- <a class="logo" href="#">Viking</a> -->
+            </div>
+            <div class="burger">
+                <span class="bar one"></span>
+                <span class="bar two"></span>
+                <span class="bar three"></span>
+            </div>
+            <div class="nav_link">
+                <ul>
+                    <li><a href="#">Hvordan sanker man?</a></li>
+                    <li><a href="#">Leksikon</a></li>
+                    <li><a href="ingredient.html">Spis som en Viking</a></li>
+                    <li><a href="ingredient_list.html">Quiz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="grid_1">
+        <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
+                src="media/up-arrow.svg" alt="opPil"></button>
+        <a href="ingredient_list.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
+        <section class="ingredient_top">
+            <img src="media/hyldeblomst1.webp" alt="hyldeblomst" id="hyldeblomst_img">
+            <h2 id="hyldeblomst_h2">Hyldeblomst</h2>
+        </section>
+        <section class="ingredient_section">
+            <h3>Sankested</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <section class="ingredient_box">
+                <p>Skov</p>
+                <p>Strand</p>
+                <p>Vandløb</p>
+            </section>
+            <h3>Type</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <section class="ingredient_box">
+                <p>Bær</p>
+            </section>
+            <h3>Sæson</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
+            <section class="ingredient_box">
+                <p>Sommer</p>
+                <p>Efterår</p>
+                <p>Vinter</p>
+                <p>Forår</p>
+            </section>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="footer_grid">
+            <img class="logo_footer" src="media/logo.svg" alt="logo">
+            <p> Vild Mad
+            </p>
+        </div>
+        <div>
+            <img class="web_footer" src="media/web_footer.svg" alt="web footer">
+        </div>
+        <div>
+            <img class="mobile_footer" src="media/mobile_footer.svg" alt="mobile footer">
+        </div>
+    </footer>
+
+    <script src="js/knap.js"></script>
+    <script src="js/viking_general.js"></script>
+    <script src="js/viking_database.js"></script>
+</body>
+
+</html>

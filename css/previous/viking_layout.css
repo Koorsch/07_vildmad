@@ -14,7 +14,7 @@ header {
   background-color: beige;
 }
 h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2.4rem;
   color: rgb(32, 31, 31);
   text-align: center;
@@ -22,7 +22,7 @@ h1 {
   margin-bottom: 30px;
 }
 h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.7rem;
   color: rgb(32, 31, 31);
   margin-left: 30px;
@@ -31,7 +31,7 @@ h2 {
 }
 
 p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.4rem;
   color: rgb(32, 31, 31);
   margin-left: 10%;
@@ -40,40 +40,15 @@ p {
   margin-bottom: 20px;
 }
 a {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.4rem;
   color: rgb(42, 40, 40);
   margin-left: 30px;
   margin-right: 30px;
 }
 a:hover {
-  color: rgb(90, 90, 90); 
- 
+  color: rgb(90, 90, 90);
 }
-
-@media screen and (min-width: 700px) {
-h1 {
- font-size: 2.4rem;
-  margin-left: 20px;
-  margin-bottom: 40px;
-}
-h2 {
-  font-size: 2.2rem;
-  margin-left: 20px;
-  margin-bottom: 30px;
-}
-p {
-  font-size: 1.7rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 30px;
-  line-height: 55px;
-}
-a {
-  margin-left: 20px;
-}
-}
-
 
 /* 
 ###### BURGERMENU/HEADER START ######
@@ -82,7 +57,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: beige;
+  background-color: #ede2c6;
 }
 
 .logo {
@@ -129,8 +104,8 @@ a {
 }
 
 .nav_link li:hover {
-  background-color: rgba(255, 255, 255, 0.577); 
-  border-radius: 35px; 
+  background-color: rgba(255, 255, 255, 0.577);
+  border-radius: 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -189,7 +164,6 @@ a {
 ##### BODY START ##### 
 */
 
-
 /* 
 ##### BODY END #####
 */
@@ -205,9 +179,14 @@ a {
 ##### FOOTER START #####
 */
 footer {
-  display: flex;
-  background-image: url(../media/web_footer.svg);
+  display: grid;
+  background-size: contain;
+  z-index: 100;
+  position: relative;
   background-repeat: no-repeat;
+  place-content: center;
+  background-image: url(../media/web_footer.svg);
+  max-height: 10%;
 }
 /* 
 ##### FOOTER END #####
@@ -217,18 +196,37 @@ footer {
   .navbar {
     flex-direction: row;
   }
-
   .nav_link {
     display: flex;
     flex-direction: row;
   }
-
   .nav_link ul {
     flex-direction: row;
   }
-
   .burger {
     display: none;
   }
   /* #### BURGERTING END #### */
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 2.4rem;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 2.2rem;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 1.7rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    line-height: 55px;
+  }
+  a {
+    margin-left: 20px;
+  }
 }

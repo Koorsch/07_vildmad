@@ -31,8 +31,8 @@ function showIngredients(ingredients) {
 function showIngredient(ingredient) {
   console.log(ingredient);
 
-  //   const template = document.querySelector("template").content;
-  //   const copy = template.cloneNode(true);
+  const template = document.querySelector("template").content;
+  const copy = template.cloneNode(true);
 
   /*
     Vores template skabelon,

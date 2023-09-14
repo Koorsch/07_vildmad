@@ -4,10 +4,7 @@ main {
 #leksikon {
   display: grid;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 .hilda {
   margin-top: 40%;
   z-index: 10;
@@ -17,7 +14,7 @@ img {
 .leksikon_box,
 #hyldeblomst_h2 {
   position: absolute;
-  background-color: rgba(211, 211, 211, 0.638); /* skal ændres til den rigtige farve*/
+  background-color: #ede2c6; /* skal ændres til den rigtige farve*/
   width: 280px;
   padding: 25px;
   display: grid;
