@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/viking_style.css">
     <link rel="stylesheet" href="css/knap.css">
     <link rel="stylesheet" href="css/ingredient.css">
+    <link rel="stylesheet" href="css/ingredient_list.css">
     <title>Spis som en viking - Ingrediens</title>
 
 </head>
@@ -36,35 +37,43 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="grid_1">
         <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
                 src="media/up-arrow.svg" alt="opPil"></button>
         <a href="ingredient_list.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
-        <header></header>
-        <!-- husk at skifte navn på billede til noget man kan forstå/læse ;) -->
-        <button onclick="history.back()" type="button"><img src="svg/reshot-icon-left-arrow-VCGUT7EKR3.svg"
-                alt="pil"></button> <!-- virker ikke helt -->
-        <img src="svg/reshot-icon-left-arrow-VCGUT7EKR3.svg" alt="pil">
-        <h2>Havtorn</h2>
-        <div>
+        <section class="ingredient_top">
+            <img src="media/hyldeblomst1.webp" alt="hyldeblomst" id="hyldeblomst_img">
+            <h2 id="hyldeblomst_h2">Hyldeblomst</h2>
+        </section>
+        <section class="ingredient_section">
             <h3>Sankested</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
             <section class="ingredient_box">
                 <p>Skov</p>
-                <p>Skov</p>
-                <p>Skov</p>
+                <p>Strand</p>
+                <p>Vandløb</p>
             </section>
             <h3>Type</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
             <section class="ingredient_box">
                 <p>Bær</p>
             </section>
             <h3>Sæson</h3>
+            <div class="hr_style">
+                <hr>
+            </div>
             <section class="ingredient_box">
                 <p>Sommer</p>
-                <p>Sommer</p>
-                <p>Sommer</p>
-                <p>Sommer</p>
+                <p>Efterår</p>
+                <p>Vinter</p>
+                <p>Forår</p>
             </section>
-        </div>
+        </section>
+
     </main>
 
     <footer>
