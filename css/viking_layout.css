@@ -6,74 +6,6 @@
   padding: 0;
   margin: 0;
 }
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-header {
-  background-color: beige;
-}
-h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 2.4rem;
-  color: rgb(32, 31, 31);
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.7rem;
-  color: rgb(32, 31, 31);
-  margin-left: 30px;
-  margin-right: 40px;
-  margin-bottom: 15px;
-}
-
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.4rem;
-  color: rgb(32, 31, 31);
-  margin-left: 10%;
-  margin-right: 10%;
-  line-height: 40px;
-  margin-bottom: 20px;
-}
-a {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.4rem;
-  color: rgb(42, 40, 40);
-  margin-left: 30px;
-  margin-right: 30px;
-}
-a:hover {
-  color: rgb(90, 90, 90); 
- 
-}
-
-@media screen and (min-width: 700px) {
-h1 {
- font-size: 2.4rem;
-  margin-left: 20px;
-  margin-bottom: 40px;
-}
-h2 {
-  font-size: 2.2rem;
-  margin-left: 20px;
-  margin-bottom: 30px;
-}
-p {
-  font-size: 1.7rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 30px;
-  line-height: 55px;
-}
-a {
-  margin-left: 20px;
-}
-}
-
 
 /* 
 ###### BURGERMENU/HEADER START ######
@@ -82,7 +14,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: beige;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo {
@@ -128,16 +61,10 @@ a {
   display: block;
 }
 
-.nav_link li:hover {
-  background-color: rgba(255, 255, 255, 0.577); 
-  border-radius: 35px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
 .burger {
   position: absolute;
   cursor: pointer;
-  top: 1.25rem;
+  top: 3.3rem;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -164,7 +91,7 @@ a {
 .burger > .bar {
   height: 5px;
   width: 100%;
-  background-color: black;
+  background-color: grey;
   border-radius: 4px;
 }
 
@@ -189,13 +116,39 @@ a {
 ##### BODY START ##### 
 */
 
-
 /* 
 ##### BODY END #####
 */
+
 /* 
 ##### MAIN START #####
 */
+main {
+  max-width: 1200px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* ### FØRSTE ARTICLE - INTRO ### START*/
+.viking_container {
+  width: 100%;
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+.intro img {
+  margin: 0.5rem;
+}
+.viking_text {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+/* ### FØRSTE ARTICLE - INTRO ### END */
+/* ### ANDRE ARTICLE - SANKE ### START */
 
 /* 
 ##### MAIN END #####
@@ -212,7 +165,18 @@ footer {
 /* 
 ##### FOOTER END #####
 */
+
+/* 
+MEDIA QUERIES START #####
+*/
+
 @media screen and (min-width: 768px) {
+  /* #### GRIDS START ##### */
+  .viking_container {
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+  }
+  /* #### GRIDS END ##### */
   /* #### BURGERTING START #### */
   .navbar {
     flex-direction: row;
@@ -232,3 +196,7 @@ footer {
   }
   /* #### BURGERTING END #### */
 }
+
+/* 
+##### MEDIA QUERIES END #####
+*/
