@@ -31,7 +31,6 @@ function showIngredients(ingredients) {
 // andre trind, pluk ud de enkelte ingredienser og lav liste view
 function showIngredient(ingredient) {
   if (idIngredient) {
-    console.table(this);
     document.querySelector("#ingrediensBild").src = ingredient.ingredientImg;
     document.querySelector("#ingrediensBild").alt = ingredient.ingredientName;
     document.querySelector("#ingrediensNavn").textContent = ingredient.ingredientName;
