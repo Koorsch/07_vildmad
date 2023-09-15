@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/viking_database.css">
     <link rel="stylesheet" href="css/viking_layout.css">
     <link rel="stylesheet" href="css/viking_style.css">
+    <link rel="stylesheet" href="css/knap.css">
+    <link rel="stylesheet" href="css/ingredient_list.css">
     <title>Spis som en viking - Ingredienser</title>
+    <link rel="stylesheet" href="css/ingredient.css">
 </head>
 <!-- Vores flotte ingredienseliste-view -->
 
@@ -15,7 +18,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="media/img/logo.svg" alt="Skjold" onclick="window.location.href='index.html'">
+                <img src="media/logo.svg" alt="Skjold" onclick="window.location.href='index.html'">
                 <!-- <a class="logo" href="#">Viking</a> -->
             </div>
             <div class="burger">
@@ -27,23 +30,98 @@
                 <ul>
                     <li><a href="#">Hvordan sanker man?</a></li>
                     <li><a href="#">Leksikon</a></li>
-                    <li><a href="#">Spis som en Viking</a></li>
-                    <li><a href="#">Quiz</a></li>
+                    <li><a href="ingredient.html">ing - Spis som en Viking</a></li>
+                    <li><a href="ingredient_list.html">list - Quiz</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <button onclick="topFunction()" id="tilToppenKnap" title="Tilbage til toppen" type="button"><img
+                src="media/up-arrow.svg" alt="opPil"></button>
+        <a href="index.html" id="tilbageKnap"><img src="media/right-arrow.svg" alt="tilbagePil"></a>
+
+        <article id="leksikon">
+            <div class="leksikon_box">
+                <h3>Leksikon</h3>
+                <p>Her kan du se hvilke ingredienser <br>
+                    Vikingerne sankede og information <br>
+                    Omkring dem</p>
+            </div>
+        </article>
+        <img src="media/hilda.svg" alt="hilda" class="hilda">
+
+        <section id="filteringsSektion">
+            <form>
+                <button type="submit" id="alfabet">A-Å</button>
+            </form>
+            <form id="filterForm">
+                <select id="filterCategory" name="filterCategory" onclick="submit()">
+                    <option value="all">Type</option>
+                    <option value="Blomster">Blomster</option>
+                    <option value="Buske og træer">Buske og træer</option>
+                    <option value="Strandurter">Strandurter</option>
+                    <option value="Svampe">Svampe</option>
+                    <option value="Tang">Tang</option>
+                    <option value="Urter og mindre vækster">Urter og mindre vækster</option>
+                </select>
+            </form>
+            <form id="searchButton">
+                <input type="search" name="query" placeholder="Søg..." id="searchBox">
+                <button type="submit" value="Search" id="seaKnap"><img src="media/search.svg" alt="søgKnap"></button>
+            </form>
+        </section>
+        <div>
+            <img src="x" alt=""> //En af vikingerne
+            <form></form>
+            <h3>B</h3>
+            <div class="hr_style">
+                <hr class="verdensSmykkestLinje">
+            </div>
+
+            <article class="verdensSmykkestLinje">
+                <a href="x"><img src="x" alt="x"></a>
+            </article>
+        </div>
+        <!--    
+
+
+        VORES FLOTTE TEMPLATE!
+        <template>
+            <h3>x</h3> hvilket bogstav vi er på
+            LINJEN <img src="x" alt="linjen">
+            <article>
+                <a href="x"><img src="x" alt="x"></a>
+            </article>
+        </template> -->
+
+
+    </main>
+    <footer>
+        <div>
+            <div id="footer_grid">
+                <img class="logo_footer" src="media/logo.svg" alt="logo">
+                <p> Vild Mad
+                </p>
+            </div>
+            <div>
+                <img class="web_footer" src="media/web_footer.svg" alt="web footer">
+            </div>
+            <div>
+                <img class="mobile_footer" src="media/mobile_footer.svg" alt="mobile footer">
+            </div>
+        </div>
+    </footer>
     <!-- 
     Hvordan skal vores flere ingrediense presenteres?
 <template>
 
 </template> 
 -->
-
-    <script src="js/viking_general.js"></script>
-    <script src="js/viking_database.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/knap.js"></script>
+    <!-- <script src="js/viking_general.js"></script>
+    <script src="js/viking_database.js"></script> -->
 </body>
 
 </html>
